@@ -3,56 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore eight herbs with pictures, descriptions, uses and growing tips.">
   <title>The Little Herb Garden</title>
-  <link rel="icon" href="images/Logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
-    <img class="logo" src="images/Logo.svg" alt="" width="48" height="48">
-    <p class="site-name">The Little Herb Garden</p>
-    <nav>
-      <ul>
-        <li><a href="#herbs">Herbs</a></li>
-        <li><a href="#visit">Visit</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
+    <a class="brand" href="index.html" aria-label="The Little Herb Garden home"><span aria-hidden="true">✿</span> The Little Herb Garden</a>
+    <nav aria-label="Main navigation"><ul>
+      <li><a href="#herbs">Herbs</a></li><li><a href="#visit">Visit</a></li><li><a href="#about">About</a></li>
+    </ul></nav>
   </header>
 
-  <main>
-    <section class="intro">
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
       <div>
-        <h1>Herbs you can smell, taste and grow</h1>
-        <p>A small garden with herbs for the kitchen, for tea and for the bees.
-          See <a href="#herbs">what grows here</p>
+        <p class="eyebrow">GROW SOMETHING GOOD</p>
+        <h1 id="page-title">Herbs you can smell, taste and grow</h1>
+        <p>Meet the little plants that bring flavour to our food, fragrance to the garden, and flowers for the bees. Choose a herb to learn more about it.</p>
+        <a class="button" href="#herbs">Explore the herbs</a>
       </div>
-      <img class="hero" src="images/garden.svg" alt="Two raised beds full of herbs, with a bee">
+      <div class="garden-art">
+        <img
+          class="hero-garden-image"
+          src="images/herb-garden-hero.png"
+          alt="A collection of fresh basil, mint, rosemary, thyme and lavender growing in terracotta pots"
+          width="1536"
+          height="1024"
+        >
+      </div>
     </section>
 
-    <section id="herbs">
-      <h2>What grows here</h2>
-      <p class="count">Loading the herbs…</p>
-      <ul id="herbs-list" class="cards"></ul>
+    <section id="herbs" class="section" aria-labelledby="herbs-title">
+      <p class="eyebrow">THE COLLECTION</p>
+      <h2 id="herbs-title">Meet the herbs</h2>
+      <p class="muted">Search by name or choose any card. Each herb has its own picture, description and growing tips.</p>
+
+      <form id="herb-search" class="search-form" role="search" autocomplete="off">
+        <label for="herb-name">Find a herb</label>
+        <div class="search-controls">
+          <div class="search-input-wrap">
+            <input id="herb-name" name="herb" type="search" placeholder="Try basil, lavender, chives…" aria-describedby="search-help" aria-controls="herb-suggestions" aria-expanded="false" aria-autocomplete="list">
+            <div id="herb-suggestions" class="suggestions" role="listbox" aria-label="Herb suggestions" hidden></div>
+          </div>
+          <button class="button search-button" type="submit">Find herb</button>
+        </div>
+        <small id="search-help">Start typing to see herb suggestions, or enter a herb name and click “Find herb”.</small>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite">Loading herbs…</p>
+      <div id="herb-list" class="cards"></div>
     </section>
 
-    <section id="visit">
+    <section id="herb-detail" class="section detail" aria-labelledby="detail-title" hidden>
+      <a class="back-link" href="#herbs">← All herbs</a>
+      <div id="detail-content"></div>
+    </section>
+
+    <section id="visit" class="section info-section">
       <h2>Visit</h2>
-      <p>The garden is open every day from sunrise to sunset.
-        Bring a friend, rub a leaf between your fingers, and leave the bees alone.</p>
+      <p>The garden is open every day from sunrise to sunset. Bring a friend, enjoy the fresh scent of the leaves, and leave the bees alone.</p>
     </section>
-
-    <section id="about">
-      <h2>About</h2>
-      <p>The garden is made up, and so is this site: a practice project for
-        <a href="https://github.com/pepe/culs-frontend-day1">Frontend Development, day 1</a>.</p>
+    <section id="about" class="section info-section">
+      <h2>About this project</h2>
+      <p>The Little Herb Garden is a frontend practice project using semantic HTML, responsive CSS, JavaScript, URL hashes, and JSON data loaded with <code>fetch()</code>.</p>
     </section>
   </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="index.html"><span aria-hidden="true">✿</span> The Little Herb Garden</a>
+        <p>A little corner for fresh flavours, fragrant leaves and greener days.</p>
+        <a class="footer-cta" href="#herbs">Explore the herb collection <span aria-hidden="true">→</span></a>
+      </div>
 
-  <footer>
-    <p>Made with HTML, CSS and JavaScript.
-      <a href="https://developer.mozilla.org/">MDN</a> helped.</p>
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="#herbs">All herbs</a></li>
+          <li><a href="#visit">Visit the garden</a></li>
+          <li><a href="#about">About this project</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>In the garden</h2>
+        <ul>
+          <li><a href="#basil">Basil</a></li>
+          <li><a href="#spearmint">Spearmint</a></li>
+          <li><a href="#rosemary">Rosemary</a></li>
+          <li><a href="#lavender">Lavender</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-note">
+        <span class="footer-leaf" aria-hidden="true">🌿</span>
+        <p><strong>Grow something good.</strong></p>
+        <p>Start small, grow with care, and enjoy the little things.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="current-year">2026</span> The Little Herb Garden</p>
+      <p>Made with care <span aria-label="love">♥</span> using HTML, CSS &amp; JavaScript</p>
+      <a href="#main">Back to top ↑</a>
+    </div>
   </footer>
 </body>
 </html>

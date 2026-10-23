@@ -1,0 +1,12 @@
+{
+  "slug": "chamomile",
+  "name": "Chamomile",
+  "latin": "Matricaria chamomilla",
+  "life": "annual",
+  "shortDescription": "Small white flowers with sunny yellow centres.",
+  "description": "Chamomile is a delicate flowering herb with daisy-like blooms and a gentle apple-like scent.",
+  "use": "A calming herbal tea made from dried flowers.",
+  "growingTips": "Grow in a sunny place with well-drained soil. Pick fully open flowers on a dry day.",
+  "image": "images/herbs/chamomile.jpg",
+  "alt": "White chamomile flowers with yellow centres"
+}
