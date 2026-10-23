@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +9,19 @@
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="The Little Herb Garden home"><span aria-hidden="true">✿</span> The Little Herb Garden</a>
-    <nav aria-label="Main navigation"><ul>
-      <li><a href="#herbs">Herbs</a></li><li><a href="#visit">Visit</a></li><li><a href="#about">About</a></li>
-    </ul></nav>
+    <a class="brand" href="index.html" aria-label="The Little Herb Garden home"><span aria-hidden="true">✿</span> The
+      Little Herb Garden</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#herbs">Herbs</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
@@ -22,35 +29,36 @@
       <div>
         <p class="eyebrow">GROW SOMETHING GOOD</p>
         <h1 id="page-title">Herbs you can smell, taste and grow</h1>
-        <p>Meet the little plants that bring flavour to our food, fragrance to the garden, and flowers for the bees. Choose a herb to learn more about it.</p>
+        <p>Meet the little plants that bring flavour to our food, fragrance to the garden, and flowers for the bees.
+          Choose a herb to learn more about it.</p>
         <a class="button" href="#herbs">Explore the herbs</a>
       </div>
       <div class="garden-art">
-        <img
-          class="hero-garden-image"
-          src="images/herb-garden-hero.png"
-          alt="A collection of fresh basil, mint, rosemary, thyme and lavender growing in terracotta pots"
-          width="1536"
-          height="1024"
-        >
+        <img class="hero-garden-image" src="images/herb-garden-hero.png"
+          alt="A collection of fresh basil, mint, rosemary, thyme and lavender growing in terracotta pots" width="1536"
+          height="1024">
       </div>
     </section>
 
     <section id="herbs" class="section" aria-labelledby="herbs-title">
       <p class="eyebrow">THE COLLECTION</p>
       <h2 id="herbs-title">Meet the herbs</h2>
-      <p class="muted">Search by name or choose any card. Each herb has its own picture, description and growing tips.</p>
+      <p class="muted">Search by name or choose any card. Each herb has its own picture, description and growing tips.
+      </p>
 
       <form id="herb-search" class="search-form" role="search" autocomplete="off">
         <label for="herb-name">Find a herb</label>
         <div class="search-controls">
           <div class="search-input-wrap">
-            <input id="herb-name" name="herb" type="search" placeholder="Try basil, lavender, chives…" aria-describedby="search-help" aria-controls="herb-suggestions" aria-expanded="false" aria-autocomplete="list">
+            <input id="herb-name" name="herb" type="search" placeholder="Try basil, lavender, chives…"
+              aria-describedby="search-help" aria-controls="herb-suggestions" aria-expanded="false"
+              aria-autocomplete="list">
             <div id="herb-suggestions" class="suggestions" role="listbox" aria-label="Herb suggestions" hidden></div>
           </div>
           <button class="button search-button" type="submit">Find herb</button>
         </div>
-        <small id="search-help">Start typing to see herb suggestions, or enter a herb name and click “Find herb”.</small>
+        <small id="search-help">Start typing to see herb suggestions, or enter a herb name and click “Find
+          herb”.</small>
       </form>
 
       <p id="status" class="status" role="status" aria-live="polite">Loading herbs…</p>
@@ -64,11 +72,13 @@
 
     <section id="visit" class="section info-section">
       <h2>Visit</h2>
-      <p>The garden is open every day from sunrise to sunset. Bring a friend, enjoy the fresh scent of the leaves, and leave the bees alone.</p>
+      <p>The garden is open every day from sunrise to sunset. Bring a friend, enjoy the fresh scent of the leaves, and
+        leave the bees alone.</p>
     </section>
     <section id="about" class="section info-section">
       <h2>About this project</h2>
-      <p>The Little Herb Garden is a frontend practice project using semantic HTML, responsive CSS, JavaScript, URL hashes, and JSON data loaded with <code>fetch()</code>.</p>
+      <p>The Little Herb Garden is a frontend practice project using semantic HTML, responsive CSS, JavaScript, URL
+        hashes, and JSON data loaded with <code>fetch()</code>.</p>
     </section>
   </main>
   <footer class="site-footer">
@@ -111,4 +121,5 @@
     </div>
   </footer>
 </body>
+
 </html>

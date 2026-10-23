@@ -61,7 +61,7 @@ async function loadHerbCards() {
     .filter(result => result.status === "fulfilled")
     .map(result => result.value);
 
-  cachedHerbs = loaded; 
+  cachedHerbs = loaded;
   herbList.replaceChildren(...loaded.map(makeHerbCard));
   const failed = results.length - loaded.length;
   status.textContent = failed
